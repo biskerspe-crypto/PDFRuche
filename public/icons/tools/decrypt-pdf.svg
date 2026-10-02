@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- Decrypt PDF — PDFRuche Colorful Flat Icon -->
+  <path d="M4 19V5a2 2 0 0 1 2-2h7l5 5v2" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1" />
+      <!-- Open Shackle (Silver) -->
+      <path d="M11 9a3 3 0 0 1 6 0v0" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round" />
+      <!-- Padlock Body (Emerald Unlocked) -->
+      <rect x="8" y="12" width="12" height="9" rx="2" fill="#10B981" stroke="#059669" stroke-width="1" />
+      <circle cx="14" cy="16.5" r="1.5" fill="#FFFFFF" />
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- PDF to JPG — PDFRuche Colorful Flat Icon -->
+  <rect x="3" y="4" width="8" height="16" rx="1.5" fill="#EF4444" />
+      <text x="7" y="13.5" font-size="2.8" text-anchor="middle" fill="#FFFFFF" font-weight="bold">PDF</text>
+      <!-- Arrow -->
+      <circle cx="12" cy="12" r="2.5" fill="#10B981" />
+      <rect x="11" y="5" width="10" height="14" rx="2" fill="#FFFFFF" stroke="#0284C7" stroke-width="1" />
+      <circle cx="14" cy="8.5" r="1.2" fill="#FBBF24" />
+      <polygon points="12 16 15 12 17 14 19 11 20 16" fill="#10B981" />
+</svg>

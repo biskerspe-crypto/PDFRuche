@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- OCR PDF — PDFRuche Colorful Flat Icon -->
+  <!-- White Document Base -->
+      <rect x="4" y="3" width="16" height="18" rx="2" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1" />
+      <!-- Text Lines -->
+      <line x1="7" y1="7" x2="13" y2="7" stroke="#64748B" stroke-width="1.2" stroke-linecap="round" />
+      <line x1="7" y1="10" x2="17" y2="10" stroke="#64748B" stroke-width="1.2" stroke-linecap="round" />
+      <line x1="7" y1="13" x2="15" y2="13" stroke="#64748B" stroke-width="1.2" stroke-linecap="round" />
+      <line x1="7" y1="16" x2="12" y2="16" stroke="#64748B" stroke-width="1.2" stroke-linecap="round" />
+      <!-- Glowing Cyan/Purple OCR Scanner Beam -->
+      <rect x="2" y="11" width="20" height="2" rx="1" fill="#06B6D4" opacity="0.9" />
+      <path d="M3 8V5h3" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M21 8V5h-3" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M3 16v3h3" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M21 16v3h-3" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round" />
+</svg>

@@ -1,0 +1,63 @@
+# GitHub Actions — Build + Deploy Cloudflare Pages + vérification AGPL
+# INSTALLATION : copier ce fichier vers .github/workflows/cloudflare-pages.yml
+# SECRETS requis (repo GitHub → Settings → Secrets → Actions) :
+#   CLOUDFLARE_API_TOKEN  (token avec droits « Cloudflare Pages : Edit »)
+#   CLOUDFLARE_ACCOUNT_ID (Dashboard → Workers & Pages → Account ID, colonne de droite)
+
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cloudflare-pages
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static export
+        run: npm run build
+        env:
+          NODE_ENV: production
+          NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL }}
+
+      - name: Verify Cloudflare limits + AGPL artifacts
+        run: |
+          test -f out/_headers || (echo "❌ out/_headers manquant"; exit 1)
+          test -f out/LICENSE.txt || (echo "❌ out/LICENSE.txt manquant (AGPL §4)"; exit 1)
+          test -f out/MODIFICATIONS.txt || (echo "❌ out/MODIFICATIONS.txt manquant"; exit 1)
+          if find out -type f -size +25M | grep -q .; then echo "❌ Fichiers > 25 Mo (limite Cloudflare Pages) :"; find out -type f -size +25M; exit 1; fi
+          grep -R "AGPL" out/fr/source/index.html > /dev/null || (echo "❌ page /source sans mention AGPL"; exit 1)
+          echo "Commit: $(git rev-parse --short HEAD) $(date -u +%Y-%m-%dT%H:%M:%SZ)" > out/SOURCE_VERSION.txt
+          echo "✅ Vérifications OK"
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy out --project-name=lunapdf
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}

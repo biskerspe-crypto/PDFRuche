@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- PNG to PDF — PDFRuche Colorful Flat Icon -->
+  <!-- PNG Transparency Grid -->
+      <rect x="3" y="5" width="10" height="14" rx="2" fill="#FFFFFF" stroke="#0284C7" stroke-width="1" />
+      <rect x="4" y="6" width="3" height="3" fill="#94A3B8" opacity="0.3" />
+      <rect x="7" y="9" width="3" height="3" fill="#94A3B8" opacity="0.3" />
+      <rect x="4" y="12" width="3" height="3" fill="#94A3B8" opacity="0.3" />
+      <circle cx="15.5" cy="12" r="3" fill="#10B981" />
+      <rect x="14" y="5" width="7" height="14" rx="1.5" fill="#EF4444" />
+</svg>

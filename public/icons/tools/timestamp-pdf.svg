@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- Timestamp PDF — PDFRuche Colorful Flat Icon -->
+  <path d="M5 4a2 2 0 0 1 2-2h8l5 5v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1" />
+      <!-- Clock Stamp (Cyan) -->
+      <circle cx="12" cy="14" r="5" fill="#38BDF8" stroke="#0284C7" stroke-width="1" />
+      <polyline points="12 11.5 12 14 14 15" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

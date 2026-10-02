@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- Photo Tiling Prepress — PDFRuche Colorful Flat Icon -->
+  <rect x="5" y="5" width="14" height="14" rx="2" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1" />
+      <!-- Image Hills -->
+      <path d="M5 15l4-4 4 4" fill="#10B981" />
+      <path d="M11 15l3-3 5 5H5v-2z" fill="#059669" />
+      <circle cx="15" cy="8" r="1.5" fill="#FBBF24" />
+      <!-- Prepress Crop Marks -->
+      <path d="M2 5h3V2" stroke="#F43F5E" stroke-width="1.2" />
+      <path d="M22 5h-3V2" stroke="#F43F5E" stroke-width="1.2" />
+      <path d="M2 19h3v3" stroke="#F43F5E" stroke-width="1.2" />
+      <path d="M22 19h-3v3" stroke="#F43F5E" stroke-width="1.2" />
+</svg>

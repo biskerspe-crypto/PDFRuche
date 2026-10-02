@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- Image to PDF — PDFRuche Colorful Flat Icon -->
+  <rect x="3" y="5" width="11" height="14" rx="2" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1" />
+      <circle cx="7" cy="8.5" r="1.5" fill="#FBBF24" />
+      <polygon points="4 16 8 11 11 14 12 13 14 16" fill="#8B5CF6" />
+      <!-- Arrow & PDF -->
+      <path d="M15 12h3" stroke="#10B981" stroke-width="1.5" stroke-linecap="round" />
+      <rect x="14" y="5" width="7" height="14" rx="1.5" fill="#EF4444" />
+</svg>

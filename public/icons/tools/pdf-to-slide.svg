@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- PDF to Slide — PDFRuche Colorful Flat Icon -->
+  <!-- Slide Canvas (Orange/PPT) -->
+      <rect x="2" y="4" width="16" height="11" rx="2" fill="#EA580C" />
+      <circle cx="7" cy="8.5" r="1.5" fill="#FFFFFF" />
+      <line x1="10" y1="8" x2="15" y2="8" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" />
+      <line x1="10" y1="11" x2="13" y2="11" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" />
+      <!-- Stand -->
+      <line x1="10" y1="15" x2="10" y2="19" stroke="#1E293B" stroke-width="2" />
+      <line x1="6" y1="19" x2="14" y2="19" stroke="#1E293B" stroke-width="2" stroke-linecap="round" />
+</svg>

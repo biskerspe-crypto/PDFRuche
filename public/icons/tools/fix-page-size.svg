@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- Fix Page Size — PDFRuche Colorful Flat Icon -->
+  <rect x="5" y="4" width="14" height="16" rx="2" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1" />
+      <!-- Cyan Rulers -->
+      <rect x="2" y="8" width="3" height="8" rx="1" fill="#38BDF8" />
+      <rect x="19" y="8" width="3" height="8" rx="1" fill="#38BDF8" />
+      <line x1="9" y1="9" x2="15" y2="9" stroke="#64748B" stroke-width="1.2" stroke-linecap="round" />
+      <line x1="9" y1="13" x2="15" y2="13" stroke="#64748B" stroke-width="1.2" stroke-linecap="round" />
+</svg>

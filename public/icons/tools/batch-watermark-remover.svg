@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- Batch Watermark Remover — PDFRuche Colorful Flat Icon -->
+  <path d="M5 4a2 2 0 0 1 2-2h8l5 5v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1" />
+      <line x1="5" y1="16" x2="16" y2="5" stroke="#F43F5E" stroke-width="2" stroke-dasharray="3 2" />
+      <!-- Eraser (Pink) -->
+      <path d="M15 13l-4 4h5l3-3-4-1z" fill="#EC4899" stroke="#E11D48" stroke-width="0.8" />
+</svg>

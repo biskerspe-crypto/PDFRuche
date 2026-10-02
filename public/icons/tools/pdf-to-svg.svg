@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- PDF to SVG — PDFRuche Colorful Flat Icon -->
+  <rect x="3" y="4" width="8" height="16" rx="1.5" fill="#EF4444" />
+      <path d="M12 17c2-6 4 2 6-4" stroke="#8B5CF6" stroke-width="1.8" fill="none" />
+      <circle cx="12" cy="17" r="1.2" fill="#F43F5E" />
+      <circle cx="18" cy="13" r="1.2" fill="#F43F5E" />
+</svg>

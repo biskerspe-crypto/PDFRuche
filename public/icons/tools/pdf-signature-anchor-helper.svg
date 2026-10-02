@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- PDF Signature Anchor Helper — PDFRuche Colorful Flat Icon -->
+  <!-- Target Crosshair (Cyan) -->
+      <circle cx="12" cy="12" r="8" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="3 2" />
+      <line x1="12" y1="2" x2="12" y2="22" stroke="#0284C7" stroke-width="1.5" />
+      <line x1="2" y1="12" x2="22" y2="12" stroke="#0284C7" stroke-width="1.5" />
+      <circle cx="12" cy="12" r="3" fill="#F43F5E" />
+      <circle cx="12" cy="12" r="1" fill="#FFFFFF" />
+</svg>

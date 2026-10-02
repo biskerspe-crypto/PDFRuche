@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- PDF to PDF/A — PDFRuche Colorful Flat Icon -->
+  <path d="M5 4a2 2 0 0 1 2-2h8l5 5v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1" />
+      <path d="M15 2v5h5" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1" />
+      <!-- Archival Golden Seal with Ribbon -->
+      <circle cx="12" cy="13" r="3.5" fill="#FBBF24" stroke="#B45309" stroke-width="1" />
+      <path d="M10.5 15.5l-1.5 4 3-1.5 3 1.5-1.5-4" fill="#F43F5E" />
+      <text x="12" y="14.2" font-size="2.8" text-anchor="middle" fill="#1E293B" font-weight="bold">A</text>
+</svg>

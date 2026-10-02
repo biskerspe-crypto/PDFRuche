@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- Font to Outline — PDFRuche Colorful Flat Icon -->
+  <path d="M7 19l4.5-13h1l4.5 13" fill="none" stroke="#6366F1" stroke-width="2.5" stroke-linecap="round" />
+      <line x1="8.5" y1="14" x2="15.5" y2="14" stroke="#6366F1" stroke-width="2" stroke-linecap="round" />
+      <!-- Vector Bezier Anchors (Pink/Coral) -->
+      <rect x="6" y="17.5" width="2.5" height="2.5" fill="#F43F5E" />
+      <rect x="15.5" y="17.5" width="2.5" height="2.5" fill="#F43F5E" />
+      <rect x="10.8" y="4.5" width="2.5" height="2.5" fill="#F43F5E" />
+</svg>

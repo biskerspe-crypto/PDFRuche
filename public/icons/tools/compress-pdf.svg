@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- Compress PDF — PDFRuche Colorful Flat Icon -->
+  <!-- White Document Center -->
+      <rect x="6" y="7" width="12" height="10" rx="2" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1" />
+      <line x1="9" y1="10" x2="15" y2="10" stroke="#64748B" stroke-width="1.2" stroke-linecap="round" />
+      <line x1="9" y1="13.5" x2="13" y2="13.5" stroke="#64748B" stroke-width="1.2" stroke-linecap="round" />
+      <!-- Top Downward Compression Arrow (Emerald Green) -->
+      <circle cx="12" cy="3.5" r="2.5" fill="#10B981" />
+      <path d="M12 2v3m-1.5-1.5L12 5l1.5-1.5" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+      <!-- Bottom Upward Compression Arrow (Emerald Green) -->
+      <circle cx="12" cy="20.5" r="2.5" fill="#10B981" />
+      <path d="M12 22v-3m-1.5 1.5L12 19l1.5 1.5" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

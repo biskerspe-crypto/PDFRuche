@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- Sign PDF — PDFRuche Colorful Flat Icon -->
+  <path d="M5 4a2 2 0 0 1 2-2h8l5 5v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1" />
+      <path d="M15 2v5h5" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1" />
+      <!-- Signature Line (Cyan) -->
+      <path d="M6 18c2-2 4 1 6-1s3 1 4 0" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" />
+      <!-- Golden Quill Pen -->
+      <path d="M15 11l3-3 2 2-3 3-2 1z" fill="#FBBF24" stroke="#B45309" stroke-width="0.8" />
+      <circle cx="19" cy="9" r="1" fill="#F43F5E" />
+</svg>

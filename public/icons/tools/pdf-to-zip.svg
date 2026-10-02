@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- PDF to ZIP — PDFRuche Colorful Flat Icon -->
+  <!-- Yellow Zip Folder -->
+      <path d="M3 6a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6z" fill="#FBBF24" stroke="#D97706" stroke-width="1" />
+      <!-- Zipper Teeth (Silver & Black) -->
+      <line x1="12" y1="6" x2="12" y2="15" stroke="#64748B" stroke-width="2" stroke-dasharray="1 1" />
+      <rect x="10.5" y="13" width="3" height="4" rx="0.8" fill="#F43F5E" />
+</svg>

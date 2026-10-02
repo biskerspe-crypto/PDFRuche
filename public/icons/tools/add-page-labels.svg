@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- Add Page Labels — PDFRuche Colorful Flat Icon -->
+  <path d="M5 4a2 2 0 0 1 2-2h8l5 5v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1" />
+      <path d="M15 2v5h5" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1" />
+      <!-- Gold Ribbon Tag -->
+      <rect x="6" y="12" width="12" height="6" rx="1.5" fill="#FBBF24" stroke="#B45309" stroke-width="1" />
+      <text x="12" y="16.2" font-size="3" text-anchor="middle" fill="#1E293B" font-weight="bold">i, ii, iii</text>
+</svg>

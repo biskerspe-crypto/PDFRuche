@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- Vector Extractor — PDFRuche Colorful Flat Icon -->
+  <circle cx="6" cy="6" r="3" fill="#F43F5E" />
+      <circle cx="18" cy="18" r="3" fill="#38BDF8" />
+      <path d="M8.5 6h7a2 2 0 0 1 2 2v7" fill="none" stroke="#6366F1" stroke-width="2" />
+      <line x1="8" y1="8" x2="16" y2="16" stroke="#64748B" stroke-width="1.5" stroke-dasharray="2 2" />
+</svg>

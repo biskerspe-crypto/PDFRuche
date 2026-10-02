@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- TXT to PDF — PDFRuche Colorful Flat Icon -->
+  <rect x="3" y="4" width="9" height="16" rx="1.5" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1" />
+      <line x1="5.5" y1="8" x2="9.5" y2="8" stroke="#64748B" stroke-width="1.2" stroke-linecap="round" />
+      <line x1="5.5" y1="11" x2="9.5" y2="11" stroke="#64748B" stroke-width="1.2" stroke-linecap="round" />
+      <line x1="5.5" y1="14" x2="8.5" y2="14" stroke="#64748B" stroke-width="1.2" stroke-linecap="round" />
+      <rect x="13" y="4" width="8" height="16" rx="1.5" fill="#EF4444" />
+      <text x="17" y="13.5" font-size="2.8" text-anchor="middle" fill="#FFFFFF" font-weight="bold">PDF</text>
+</svg>

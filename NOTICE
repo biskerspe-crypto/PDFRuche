@@ -1,0 +1,17 @@
+PDFRuche — NOTICE
+================
+
+PDFRuche — Copyright (C) 2024-2026 PDFRuche Team
+Based on PDFCraft — Copyright (c) PDFCraft Team
+Original repository: https://github.com/PDFCraftTool/pdfcraft
+License: GNU Affero General Public License v3 or later (AGPL-3.0-or-later)
+Full license text: ./LICENSE and https://www.gnu.org/licenses/agpl-3.0.html
+
+Modifications are documented in PDFRUCHE_MODIFICATIONS.md.
+Corresponding Source for any network deployment is available at:
+  - https://github.com/PDFCraftTool/pdfcraft (and your deployed fork)
+  - /LICENSE.txt and /MODIFICATIONS.txt on the deployed site
+  - /source page on the deployed site
+  - Release attachments pdfcraft-source-*.zip/.tar.gz
+
+This NOTICE is provided for attribution purposes (AGPL §5b, §7b).

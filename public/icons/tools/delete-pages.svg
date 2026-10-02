@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- Delete Pages — PDFRuche Colorful Flat Icon -->
+  <!-- Paper Sheet -->
+      <path d="M4 4a2 2 0 0 1 2-2h8l5 5v8a2 2 0 0 1-2 2h-3" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1" />
+      <path d="M14 2v5h5" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1" />
+      <line x1="7" y1="10" x2="12" y2="10" stroke="#94A3B8" stroke-width="1.2" stroke-linecap="round" />
+      <line x1="7" y1="13" x2="11" y2="13" stroke="#94A3B8" stroke-width="1.2" stroke-linecap="round" />
+      <!-- Red Delete Badge -->
+      <circle cx="16" cy="16" r="5" fill="#F43F5E" />
+      <line x1="13.5" y1="16" x2="18.5" y2="16" stroke="#FFFFFF" stroke-width="1.75" stroke-linecap="round" />
+</svg>

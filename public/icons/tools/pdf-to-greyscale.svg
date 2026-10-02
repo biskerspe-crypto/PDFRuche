@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- PDF to Greyscale — PDFRuche Colorful Flat Icon -->
+  <rect x="3" y="4" width="8" height="16" rx="1.5" fill="#EF4444" />
+      <rect x="13" y="4" width="8" height="16" rx="1.5" fill="#FFFFFF" stroke="#1E293B" stroke-width="1" />
+      <circle cx="17" cy="12" r="3.5" fill="#64748B" />
+</svg>

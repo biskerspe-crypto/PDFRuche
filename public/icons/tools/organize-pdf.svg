@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- Organize PDF — PDFRuche Colorful Flat Icon -->
+  <!-- Yellow Folder Body (Image 1 reference) -->
+      <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v2H3V7z" fill="#D97706" />
+      <!-- Interior White Pages with Blue Accent -->
+      <rect x="5" y="7.5" width="14" height="9" rx="1" fill="#FFFFFF" />
+      <line x1="8" y1="10.5" x2="14" y2="10.5" stroke="#38BDF8" stroke-width="1.2" stroke-linecap="round" />
+      <line x1="8" y1="13" x2="12" y2="13" stroke="#94A3B8" stroke-width="1.2" stroke-linecap="round" />
+      <!-- Folder Front Flap (Bright Yellow) -->
+      <path d="M2.5 10.5h19l-1.8 8.5a2 2 0 0 1-2 1.5H6.3a2 2 0 0 1-2-1.5L2.5 10.5z" fill="#FBBF24" stroke="#D97706" stroke-width="0.8" />
+</svg>

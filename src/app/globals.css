@@ -1,0 +1,1251 @@
+@import "tailwindcss";
+
+/* PDFRuche Design System - CSS Variables for Theming */
+:root {
+  /* Primary — Vert émeraude forêt vivante (tree) */
+  --color-primary: 158 64% 32%; /* #1D7755 */
+  --color-primary-foreground: 0 0% 100%;
+  --color-primary-hover: 158 64% 38%;
+
+  /* Secondary — Bleu canard / ardoise pétrole (PDF) */
+  --color-secondary: 195 70% 25%; /* #103554 */
+  --color-secondary-foreground: 0 0% 100%;
+  --color-secondary-hover: 195 70% 32%;
+
+  /* Accent — Ambre & or solaire (my & feuilles d'automne) */
+  --color-accent: 38 92% 50%; /* #F59E0B */
+  --color-accent-foreground: 0 0% 100%;
+
+  /* Backgrounds — Tons parchemin écologique & rosée fraîche */
+  --color-background: 140 20% 98%; /* Blanc végétal très doux #F8FAF8 */
+  --color-foreground: 165 40% 10%; /* Vert ardoise très sombre */
+
+  /* Muted Colors */
+  --color-muted: 140 20% 92%;
+  --color-muted-foreground: 160 15% 45%;
+
+  /* Card Colors */
+  --color-card: 0 0% 100%;
+  --color-card-foreground: 165 40% 10%;
+
+  /* Border Colors */
+  --color-border: 145 20% 88%;
+  --color-input: 145 20% 88%;
+  --color-ring: 158 64% 40%;
+  
+  /* Destructive Colors */
+  --color-destructive: 0 84% 60%;
+  --color-destructive-foreground: 0 0% 100%;
+  
+  /* Success Colors */
+  --color-success: 158 64% 40%;
+  --color-success-foreground: 0 0% 100%;
+  
+  /* Warning Colors */
+  --color-warning: 38 92% 50%;
+  --color-warning-foreground: 0 0% 100%;
+  
+  /* Typography */
+  --font-sans: var(--font-inter, 'Inter'), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: var(--font-display, 'Space Grotesk'), var(--font-inter, 'Inter'), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono, 'JetBrains Mono'), 'Fira Code', Consolas, monospace;
+  
+  /* Spacing Scale */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  
+  /* Border Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+  
+  /* Shadows - Layered, smoother shadows for depth */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+  
+  /* Transitions */
+  --transition-fast: 150ms;
+  --transition-normal: 250ms;
+  --transition-slow: 350ms;
+}
+
+/* Dark Mode Theme — Nuit boréale / Forêt nocturne bioluminescente */
+.dark {
+  color-scheme: dark;
+  --color-primary: 158 65% 45%; /* Vert jade étincelant #10B981 */
+  --color-primary-foreground: 165 45% 5%;
+  --color-primary-hover: 158 65% 55%;
+
+  --color-secondary: 195 70% 45%; /* Bleu canard lumineux #0EA5E9 */
+  --color-secondary-foreground: 165 45% 5%;
+  --color-secondary-hover: 195 70% 55%;
+
+  --color-accent: 38 92% 52%; /* Ambre doré rayonnant */
+  --color-accent-foreground: 0 0% 100%;
+
+  --color-background: 165 45% 5%; /* Nuit forêt profonde #06120E */
+  --color-foreground: 140 20% 98%;
+
+  --color-muted: 165 30% 10%;
+  --color-muted-foreground: 155 18% 65%;
+
+  --color-card: 165 35% 8%; /* Verre forêt sombre #0A1C16 */
+  --color-card-foreground: 140 20% 98%;
+
+  --color-border: 165 25% 16%;
+  --color-input: 165 25% 16%;
+  --color-ring: 158 65% 45%;
+}
+
+/* Base Styles */
+* {
+  border-color: hsl(var(--color-border));
+}
+
+body {
+  background-color: hsl(var(--color-background));
+  color: hsl(var(--color-foreground));
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base Styles for Form Elements */
+select, input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), textarea {
+  background-color: hsl(var(--color-background));
+  color: hsl(var(--color-foreground));
+}
+
+select option {
+  background-color: hsl(var(--color-background));
+  color: hsl(var(--color-foreground));
+}
+
+/* Utility Classes using CSS Variables */
+@theme {
+  /* Colors */
+  --color-primary: hsl(var(--color-primary));
+  --color-primary-foreground: hsl(var(--color-primary-foreground));
+  --color-secondary: hsl(var(--color-secondary));
+  --color-secondary-foreground: hsl(var(--color-secondary-foreground));
+  --color-accent: hsl(var(--color-accent));
+  --color-accent-foreground: hsl(var(--color-accent-foreground));
+  --color-background: hsl(var(--color-background));
+  --color-foreground: hsl(var(--color-foreground));
+  --color-muted: hsl(var(--color-muted));
+  --color-muted-foreground: hsl(var(--color-muted-foreground));
+  --color-card: hsl(var(--color-card));
+  --color-card-foreground: hsl(var(--color-card-foreground));
+  --color-border: hsl(var(--color-border));
+  --color-destructive: hsl(var(--color-destructive));
+  --color-destructive-foreground: hsl(var(--color-destructive-foreground));
+  --color-success: hsl(var(--color-success));
+  --color-success-foreground: hsl(var(--color-success-foreground));
+  --color-warning: hsl(var(--color-warning));
+  --color-warning-foreground: hsl(var(--color-warning-foreground));
+  
+  /* Border Radius */
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  
+  /* Font Family */
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-mono);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Focus Ring Utility */
+.focus-ring {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid hsl(var(--color-ring));
+  box-shadow: 0 0 0 2px hsl(var(--color-background)), 0 0 0 4px hsl(var(--color-ring));
+}
+
+/* Global focus-visible styles */
+:focus-visible {
+  outline: 2px solid hsl(var(--color-ring));
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.dark .glass-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.4));
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Lunar Animations */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.animation-delay-500 { animation-delay: 0.5s; }
+.animation-delay-1000 { animation-delay: 1s; }
+.animation-delay-1500 { animation-delay: 1.5s; }
+.animation-delay-2000 { animation-delay: 2s; }
+.animation-delay-2500 { animation-delay: 2.5s; }
+
+@keyframes moonrise {
+  0% { opacity: 0; transform: translateY(24px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-moonrise {
+  animation: moonrise 0.6s ease-out both;
+}
+
+@keyframes slide-up {
+  0% { opacity: 0; transform: translateY(16px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.4s ease-out both;
+}
+
+@keyframes fade-scale {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-scale {
+  animation: fade-scale 0.35s ease-out both;
+}
+
+@keyframes shimmer-lunar {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer-lunar {
+  background: linear-gradient(90deg,
+    hsl(var(--color-muted)) 25%,
+    hsl(var(--color-secondary) / 0.25) 50%,
+    hsl(var(--color-muted)) 75%);
+  background-size: 200% 100%;
+  animation: shimmer-lunar 1.8s linear infinite;
+}
+
+/* Version B Luna PDF Custom GPU-only Keyframes */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(12px) rotate(-1.5deg); }
+}
+
+@keyframes glow-pulse-luna {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.65; transform: scale(1.05); }
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 7s ease-in-out infinite;
+}
+
+.animate-glow-pulse-luna {
+  animation: glow-pulse-luna 5s ease-in-out infinite;
+}
+
+/* Gradient Text */
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, hsl(var(--color-primary)), hsl(var(--color-accent)));
+}
+
+/* Screen reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only:focus,
+.sr-only:focus-visible {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* RTL Support - Simplified */
+[dir="rtl"] { text-align: right; }
+[dir="rtl"] .rtl\:flip { transform: scaleX(-1); }
+[dir="rtl"] .me-2 { margin-inline-end: 0.5rem; }
+[dir="rtl"] .ms-2 { margin-inline-start: 0.5rem; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--color-secondary) / 0.8);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--color-secondary-hover));
+}
+::-webkit-scrollbar-thumb:active {
+  background: hsl(var(--color-secondary-hover));
+}
+
+/* Shimmer */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+.animate-shimmer {
+  animation: shimmer 1.5s infinite;
+}
+.scroll-smooth { scroll-behavior: smooth; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+
+/* ==========================================================================
+   Home V2 — Galaxy / Luna animations (namespaced .lv2-*)
+   GPU-only: transform & opacity. Covered by global prefers-reduced-motion.
+   ========================================================================== */
+
+/* Twilight hero background: deep starry indigo fading to pale dawn */
+.lv2-twilight {
+  background: linear-gradient(
+    to bottom,
+    hsl(238 60% 9%) 0%,
+    hsl(234 55% 16%) 26%,
+    hsl(228 48% 30%) 52%,
+    hsl(222 40% 58%) 74%,
+    hsl(219 45% 88%) 92%,
+    hsl(var(--color-background)) 100%
+  );
+}
+
+.dark .lv2-twilight {
+  background: linear-gradient(
+    to bottom,
+    hsl(240 65% 6%) 0%,
+    hsl(236 58% 11%) 28%,
+    hsl(230 50% 20%) 56%,
+    hsl(224 42% 32%) 78%,
+    hsl(222 40% 14%) 94%,
+    hsl(var(--color-background)) 100%
+  );
+}
+
+/* Starfields — tiled radial-gradient dots, three parallax depths */
+.lv2-stars-sm,
+.lv2-stars-md,
+.lv2-stars-lg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.lv2-stars-sm {
+  background-image:
+    radial-gradient(1px 1px at 22px 34px, rgba(255, 255, 255, 0.95), transparent 100%),
+    radial-gradient(1px 1px at 121px 86px, rgba(190, 220, 255, 0.85), transparent 100%),
+    radial-gradient(1px 1px at 233px 158px, rgba(255, 255, 255, 0.7), transparent 100%),
+    radial-gradient(1px 1px at 67px 201px, rgba(214, 199, 255, 0.85), transparent 100%),
+    radial-gradient(1px 1px at 178px 27px, rgba(255, 255, 255, 0.75), transparent 100%);
+  background-size: 260px 240px;
+  animation: lv2-twinkle-layer 5s ease-in-out infinite;
+}
+
+.lv2-stars-md {
+  background-image:
+    radial-gradient(1.5px 1.5px at 44px 62px, rgba(255, 255, 255, 0.95), transparent 100%),
+    radial-gradient(1.5px 1.5px at 190px 140px, rgba(165, 210, 255, 0.9), transparent 100%),
+    radial-gradient(1.5px 1.5px at 305px 41px, rgba(255, 245, 220, 0.85), transparent 100%),
+    radial-gradient(1.5px 1.5px at 112px 232px, rgba(255, 255, 255, 0.8), transparent 100%),
+    radial-gradient(1.5px 1.5px at 258px 291px, rgba(200, 185, 255, 0.8), transparent 100%),
+    radial-gradient(1.5px 1.5px at 350px 180px, rgba(255, 255, 255, 0.65), transparent 100%);
+  background-size: 420px 360px;
+  animation: lv2-twinkle-layer 7s ease-in-out infinite;
+  animation-delay: 1.6s;
+}
+
+.lv2-stars-lg {
+  background-image:
+    radial-gradient(2.2px 2.2px at 80px 110px, rgba(255, 255, 255, 1), transparent 100%),
+    radial-gradient(2.2px 2.2px at 290px 260px, rgba(186, 230, 253, 0.95), transparent 100%),
+    radial-gradient(2.2px 2.2px at 480px 70px, rgba(255, 250, 235, 0.9), transparent 100%),
+    radial-gradient(2.2px 2.2px at 180px 380px, rgba(255, 255, 255, 0.85), transparent 100%),
+    radial-gradient(2.2px 2.2px at 400px 330px, rgba(216, 200, 255, 0.85), transparent 100%);
+  background-size: 620px 520px;
+  animation: lv2-twinkle-layer 9s ease-in-out infinite;
+  animation-delay: 3.2s;
+}
+
+@keyframes lv2-twinkle-layer {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+
+/* Shooting stars */
+.lv2-shoot {
+  position: absolute;
+  width: 130px;
+  height: 1.5px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.95));
+  filter: drop-shadow(0 0 4px rgba(190, 225, 255, 0.9));
+  opacity: 0;
+  pointer-events: none;
+}
+
+.lv2-shoot-a {
+  top: 14%;
+  left: 68%;
+  transform: rotate(-32deg);
+  animation: lv2-shoot 13s ease-in infinite 2.5s;
+}
+
+.lv2-shoot-b {
+  top: 34%;
+  left: 24%;
+  transform: rotate(-28deg) scale(0.7);
+  animation: lv2-shoot 17s ease-in infinite 9s;
+}
+
+@keyframes lv2-shoot {
+  0%, 91% { opacity: 0; transform: translate3d(0, 0, 0) rotate(-32deg); }
+  92.5% { opacity: 1; }
+  100% { opacity: 0; transform: translate3d(-430px, 250px, 0) rotate(-32deg); }
+}
+
+/* Drifting nebula blobs */
+.lv2-nebula {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  will-change: transform;
+  pointer-events: none;
+}
+
+@keyframes lv2-drift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  33% { transform: translate3d(46px, -34px, 0) scale(1.12); }
+  66% { transform: translate3d(-36px, 28px, 0) scale(0.92); }
+}
+
+.animate-lv2-drift { animation: lv2-drift 18s ease-in-out infinite; }
+
+/* Moon float + glow */
+@keyframes lv2-float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.animate-lv2-float-y { animation: lv2-float-y 7s ease-in-out infinite; }
+
+@keyframes lv2-glow-pulse {
+  0%, 100% { opacity: 0.45; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.07); }
+}
+
+.animate-lv2-glow-pulse { animation: lv2-glow-pulse 6s ease-in-out infinite; }
+
+/* Orbiting satellite dot (SVG group) */
+@keyframes lv2-orbit-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.lv2-orbit-spin {
+  transform-box: view-box;
+  animation: lv2-orbit-spin 16s linear infinite;
+}
+
+/* Sparkle twinkle (SVG) */
+@keyframes lv2-sparkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.6); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+.lv2-sparkle {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: lv2-sparkle 3.2s ease-in-out infinite;
+}
+
+/* Shimmering gradient text (hero highlight) */
+.lv2-shimmer-text {
+  background: linear-gradient(
+    100deg,
+    #a5d8ff 0%,
+    #e0c7ff 28%,
+    #ffd9ec 52%,
+    #a5d8ff 78%,
+    #e0c7ff 100%
+  );
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: lv2-shimmer-text 7s ease-in-out infinite;
+}
+
+@keyframes lv2-shimmer-text {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* --------------------------------------------------------------------------
+   Galaxy / Cosmique gradient for Home V3 hero title — "Professional PDF Tools"
+   Palette riche : bleu cosmique #4A00E0 → violet #8E2DE2 → magenta néon #F000FF → cyan #00FFFF
+   Orientation 135deg + léger glow stellaire, garanti lisible sur fond lv3-night
+   -------------------------------------------------------------------------- */
+.lv3-galaxy-text {
+  background: linear-gradient(135deg, #4a00e0 0%, #8e2de2 40%, #f000ff 75%, #00ffff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Glow néon subtil sans altérer la lisibilité */
+  filter: drop-shadow(0 0 12px rgba(142, 45, 226, 0.4));
+  /* Alternative Tailwind équivalente :
+     class="bg-[linear-gradient(135deg,#4A00E0_0%,#8E2DE2_40%,#F000FF_75%,#00FFFF_100%)] bg-clip-text text-transparent [filter:drop-shadow(0_0_12px_rgba(142,45,226,0.4))]" */
+}
+
+/* Scroll reveal (IntersectionObserver adds .lv2-in) */
+[data-lv2-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--rv-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+[data-lv2-reveal].lv2-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Scroll cue bounce */
+@keyframes lv2-scroll-cue {
+  0%, 100% { transform: translateY(0); opacity: 0.9; }
+  50% { transform: translateY(7px); opacity: 0.4; }
+}
+
+.animate-lv2-scroll-cue { animation: lv2-scroll-cue 2s ease-in-out infinite; }
+
+/* ==========================================================================
+   Home V3 — "Luna Odyssey" (namespaced .lv3-*)
+   GPU-only: transform & opacity & clip-path. Covered by global reduced-motion.
+   ========================================================================== */
+
+/* Deep space hero background (canvas sits on top) */
+.lv3-night {
+  background:
+    radial-gradient(1200px 700px at 78% -10%, rgba(99, 102, 241, 0.22), transparent 60%),
+    linear-gradient(
+      to bottom,
+      hsl(232 65% 5%) 0%,
+      hsl(230 55% 10%) 42%,
+      hsl(236 45% 18%) 74%,
+      #312e81 100%
+    );
+}
+
+.dark .lv3-night {
+  background:
+    radial-gradient(1200px 700px at 78% -10%, rgba(99, 102, 241, 0.16), transparent 60%),
+    linear-gradient(
+      to bottom,
+      hsl(234 70% 3%) 0%,
+      hsl(232 60% 7%) 44%,
+      hsl(238 50% 12%) 76%,
+      #1e1b4b 100%
+    );
+}
+
+/* Divider: deep space → page background */
+.lv3-divider {
+  background: linear-gradient(to bottom, #312e81, hsl(var(--color-background)));
+}
+
+.dark .lv3-divider {
+  background: linear-gradient(to bottom, #1e1b4b, hsl(var(--color-background)));
+}
+
+/* Filmic grain overlay */
+.lv3-grain {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  pointer-events: none;
+  opacity: 0.032;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 160px 160px;
+}
+
+@keyframes lv3-grain-shift {
+  0% { background-position: 0 0; }
+  25% { background-position: -38px 22px; }
+  50% { background-position: 24px -30px; }
+  75% { background-position: -14px -12px; }
+  100% { background-position: 30px 34px; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .lv3-grain { animation: lv3-grain-shift 1.4s steps(5) infinite; }
+}
+
+/* Per-letter hero reveal (staggered via --i) */
+@keyframes lv3-letter-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.55em) rotate(5deg);
+    filter: blur(7px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+    filter: blur(0);
+  }
+}
+
+.lv3-letter {
+  display: inline-block;
+  will-change: transform, opacity;
+  animation: lv3-letter-in 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(var(--i, 0) * 26ms + 180ms);
+}
+
+/* Hero title gradient: when "Professional PDF Tools" is wrapped with .lv2-shimmer-text,
+   each staggered letter must carry the gradient itself (parent clip doesn't reach children) */
+.lv2-shimmer-text .lv3-letter {
+  background: linear-gradient(100deg, #a5d8ff 0%, #e0c7ff 28%, #ffd9ec 52%, #a5d8ff 78%, #e0c7ff 100%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation:
+    lv3-letter-in 0.75s cubic-bezier(0.22, 1, 0.36, 1) both,
+    lv2-shimmer-text 7s ease-in-out infinite;
+  animation-delay:
+    calc(var(--i, 0) * 26ms + 180ms),
+    0s;
+}
+
+/* Galaxy variant : même logique per-letter pour conserver le stagger SplitLetters
+   La lueur est appliquée par lettre pour épouser la forme du glyphe sur fond lv3-night */
+.lv3-galaxy-text .lv3-letter {
+  background: linear-gradient(135deg, #4a00e0 0%, #8e2de2 40%, #f000ff 75%, #00ffff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 8px rgba(142, 45, 226, 0.35));
+  animation: lv3-letter-in 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(var(--i, 0) * 26ms + 180ms);
+}
+
+/* Highlight line rises from a mask */
+@keyframes lv3-rise {
+  from {
+    clip-path: inset(105% 0 0 0);
+    transform: translateY(0.35em);
+  }
+  to {
+    clip-path: inset(-20% 0 0 0);
+    transform: translateY(0);
+  }
+}
+
+.lv3-rise {
+  animation: lv3-rise 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 0.9s;
+}
+
+/* Infinite elegant marquee */
+@keyframes lv3-marquee-x {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.lv3-marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+}
+
+.lv3-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: lv3-marquee-x var(--marquee-duration, 46s) linear infinite;
+}
+
+.lv3-marquee:hover .lv3-marquee-track {
+  animation-play-state: paused;
+}
+
+[dir="rtl"] .lv3-marquee-track {
+  animation-direction: reverse;
+}
+
+/* Constellation rail nodes */
+.lv3-node {
+  color: hsl(var(--color-muted-foreground) / 0.5);
+  transition: color 500ms ease, transform 500ms cubic-bezier(0.34, 1.56, 0.64, 1), filter 500ms ease;
+  transform: translate(-50%, -50%) scale(0.72);
+}
+
+.lv3-node-star {
+  filter: drop-shadow(0 0 2px transparent);
+  transition: filter 500ms ease;
+}
+
+.lv3-node-active {
+  color: #93c5fd;
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.lv3-node-active .lv3-node-star {
+  filter: drop-shadow(0 0 5px rgba(147, 197, 253, 0.9));
+}
+
+/* Spotlight card (follows cursor via --mx / --my custom properties) */
+.lv3-spot {
+  position: relative;
+}
+
+.lv3-spot::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    340px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(99, 102, 241, 0.13),
+    transparent 65%
+  );
+  opacity: 0;
+  transition: opacity 400ms ease;
+  pointer-events: none;
+}
+
+.lv3-spot:hover::before {
+  opacity: 1;
+}
+
+/* Moonrise transition for final CTA */
+.lv3-moonrise {
+  transform: translateY(58%);
+  transition: transform 1.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lv3-moonrise.risen {
+  transform: translateY(30%);
+}
+
+/* Content below the fold — skip rendering until near viewport */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 720px;
+}
+
+/* ==========================================================================
+   Home V4 — SaaS premium design system (namespaced .lv4-*)
+   ========================================================================== */
+
+/* Clean card surface */
+.lv4-card {
+  background: hsl(var(--color-card));
+  border: 1px solid hsl(var(--color-border) / 0.6);
+  border-radius: 1rem;
+  box-shadow:
+    0 1px 2px rgb(15 23 42 / 0.04),
+    0 4px 12px -2px rgb(15 23 42 / 0.04);
+  transition:
+    transform 300ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 300ms ease,
+    border-color 300ms ease;
+}
+
+.dark .lv4-card {
+  box-shadow:
+    0 1px 2px rgb(0 0 0 / 0.3),
+    0 6px 16px -4px rgb(0 0 0 / 0.35);
+}
+
+.lv4-card:hover {
+  transform: translateY(-3px);
+  border-color: hsl(var(--color-secondary) / 0.35);
+  box-shadow:
+    0 4px 8px rgb(15 23 42 / 0.05),
+    0 14px 28px -8px hsl(var(--color-primary) / 0.14);
+}
+
+/* Header nav underline */
+.lv4-nav {
+  position: relative;
+  padding-block: 4px;
+}
+
+.lv4-nav::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -2px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #00a1e4, #4f6bf5);
+  transition: right 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lv4-nav:hover::after,
+.lv4-nav[aria-current='page']::after {
+  right: 0;
+}
+
+/* Filter chips */
+.lv4-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 9999px;
+  border: 1px solid hsl(var(--color-border));
+  background: hsl(var(--color-card));
+  color: hsl(var(--color-muted-foreground));
+  cursor: pointer;
+  transition: all 200ms ease;
+  white-space: nowrap;
+}
+
+.lv4-chip:hover {
+  border-color: hsl(var(--color-secondary) / 0.5);
+  color: hsl(var(--color-foreground));
+}
+
+.lv4-chip-active {
+  background: hsl(var(--color-primary));
+  border-color: hsl(var(--color-primary));
+  color: hsl(var(--color-primary-foreground));
+  box-shadow: 0 4px 12px -2px hsl(var(--color-primary) / 0.35);
+}
+
+/* Smart dropzone */
+.lv4-dropzone {
+  position: relative;
+  border: 2px dashed hsl(var(--color-secondary) / 0.45);
+  border-radius: 1.75rem;
+  background:
+    radial-gradient(600px 220px at 50% 0%, hsl(var(--color-secondary) / 0.06), transparent 70%),
+    hsl(var(--color-card));
+  transition: all 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lv4-dropzone:hover,
+.lv4-dropzone:focus-visible {
+  border-color: hsl(var(--color-secondary));
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px -14px hsl(var(--color-secondary) / 0.25);
+}
+
+.lv4-dropzone.is-drag {
+  border-color: hsl(var(--color-secondary));
+  background:
+    radial-gradient(600px 240px at 50% 10%, hsl(var(--color-secondary) / 0.14), transparent 70%),
+    hsl(var(--color-card));
+  transform: scale(1.01);
+}
+
+/* Goal icon tiles */
+.lv4-goal-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.lv4-card:hover .lv4-goal-icon {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+/* Stepper */
+@keyframes lv4-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lv4-fade-up {
+  animation: lv4-fade-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--i, 0ms);
+}
+
+@keyframes lv4-pop {
+  0% { transform: scale(0.4); opacity: 0; }
+  60% { transform: scale(1.15); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.lv4-pop {
+  animation: lv4-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* ==========================================================================
+   Home V4 Artistic Universe — "Aurora Studio"
+   Inspired by vibrant digital art direction: luminous gradients, frosted glass,
+   spotlight interactions, cyber accents and living micro-animations.
+   ========================================================================== */
+
+/* Grid background texture */
+.lv4-grid-texture {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+}
+
+.dark .lv4-grid-texture {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+/* Aurora animated gradient blobs */
+@keyframes lv4-aurora-1 {
+  0%, 100% { transform: translate(0px, 0px) scale(1) rotate(0deg); }
+  33% { transform: translate(60px, -40px) scale(1.15) rotate(45deg); }
+  66% { transform: translate(-40px, 50px) scale(0.9) rotate(-30deg); }
+}
+
+@keyframes lv4-aurora-2 {
+  0%, 100% { transform: translate(0px, 0px) scale(1) rotate(0deg); }
+  33% { transform: translate(-50px, 60px) scale(1.1) rotate(-40deg); }
+  66% { transform: translate(50px, -30px) scale(0.95) rotate(35deg); }
+}
+
+@keyframes lv4-aurora-3 {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  50% { transform: translate(40px, 40px) scale(1.2); }
+}
+
+.animate-lv4-aurora-1 { animation: lv4-aurora-1 22s ease-in-out infinite; }
+.animate-lv4-aurora-2 { animation: lv4-aurora-2 26s ease-in-out infinite; }
+.animate-lv4-aurora-3 { animation: lv4-aurora-3 18s ease-in-out infinite; }
+
+/* Aurora / Tree multi-color gradient text */
+.lv4-text-aurora {
+  background: linear-gradient(135deg, #34d399 0%, #10b981 30%, #38bdf8 65%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tree-text-gradient {
+  background: linear-gradient(135deg, #34d399 0%, #059669 40%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lv4-text-prism {
+  background: linear-gradient(135deg, #38bdf8 0%, #34d399 30%, #10b981 60%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lv4-text-fire {
+  background: linear-gradient(135deg, #fbbf24 0%, #f97316 50%, #10b981 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism panel with specular border */
+.lv4-glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  box-shadow: 
+    0 4px 24px -1px rgba(0, 0, 0, 0.05),
+    0 0 0 1px rgba(255, 255, 255, 0.4) inset;
+}
+
+.dark .lv4-glass-panel {
+  background: rgba(6, 20, 15, 0.7);
+  border: 1px solid rgba(52, 211, 153, 0.15);
+  box-shadow: 
+    0 10px 30px -5px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(52, 211, 153, 0.08) inset;
+}
+
+/* Studio Tool Card with Dynamic Glow on Hover */
+.lv4-studio-card {
+  position: relative;
+  background: hsl(var(--color-card) / 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid hsl(var(--color-border) / 0.7);
+  border-radius: 1.25rem;
+  transition: all 300ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  overflow: hidden;
+}
+
+.lv4-studio-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(135deg, transparent 30%, rgba(56, 189, 248, 0.95), rgba(14, 165, 233, 0.75));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 300ms ease;
+  pointer-events: none;
+}
+
+.lv4-studio-card:hover {
+  transform: translateY(-4px);
+  border-color: transparent;
+  box-shadow: 
+    0 12px 30px -8px rgba(56, 189, 248, 0.28),
+    0 4px 12px -2px rgba(0, 0, 0, 0.08);
+}
+
+.lv4-studio-card:hover::before {
+  opacity: 1;
+}
+
+/* Dynamic Interactive Pill / Tab */
+.lv4-tab-btn {
+  position: relative;
+  transition: all 250ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.lv4-tab-btn.active {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%);
+  box-shadow: 0 4px 20px -2px rgba(99, 102, 241, 0.45);
+}
+
+/* Pulse animation for live indicators */
+@keyframes lv4-ping-slow {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 0; }
+}
+
+.animate-lv4-ping {
+  animation: lv4-ping-slow 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Shiny Sheen hover effect */
+.lv4-sheen {
+  position: relative;
+  overflow: hidden;
+}
+
+.lv4-sheen::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 70%
+  );
+  transform: rotate(30deg) translateX(-100%);
+  transition: transform 650ms ease;
+  pointer-events: none;
+}
+
+.lv4-sheen:hover::after {
+  transform: rotate(30deg) translateX(100%);
+}
+
+/* ==========================================================================
+   Luna Cosmos — Space & Lunar Visual Identity
+   ========================================================================== */
+
+/* Gentle breathing glow for the celestial moon halo */
+@keyframes lv4-moon-aura {
+  0%, 100% {
+    opacity: 0.7;
+    transform: scale(1);
+    filter: blur(120px);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.06);
+    filter: blur(140px);
+  }
+}
+
+.animate-lv4-moon-aura {
+  animation: lv4-moon-aura 9s ease-in-out infinite;
+}
+
+/* Subtle cosmic light beam traversing across the background */
+@keyframes lv4-cosmic-beam {
+  0% {
+    transform: rotate(-35deg) translateY(-120%) translateX(-50%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  85% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: rotate(-35deg) translateY(180%) translateX(50%);
+    opacity: 0;
+  }
+}
+
+.animate-lv4-cosmic-beam-1 {
+  animation: lv4-cosmic-beam 16s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+}
+
+.animate-lv4-cosmic-beam-2 {
+  animation: lv4-cosmic-beam 22s cubic-bezier(0.25, 1, 0.5, 1) infinite 9s;
+}
+
+/* Lunar iridescent border for highlight cards */
+.lv4-lunar-border {
+  position: relative;
+}
+
+.lv4-lunar-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(224, 242, 254, 0.4) 0%, rgba(99, 102, 241, 0.25) 50%, rgba(192, 132, 252, 0.3) 100%);
+  z-index: -1;
+  opacity: 0.6;
+  transition: opacity 300ms ease;
+}
+
+.lv4-lunar-border:hover::before {
+  opacity: 1;
+}
+

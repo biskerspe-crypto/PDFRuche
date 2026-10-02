@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- Deskew PDF — PDFRuche Colorful Flat Icon -->
+  <rect x="4" y="4" width="16" height="16" rx="2" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3 2" />
+      <!-- Slanted Sheet straightened -->
+      <path d="M6.5 7l11 1.5-2 10-11-1.5z" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.2" />
+      <polyline points="14 20 16 19 15 17" stroke="#10B981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
