@@ -9,6 +9,9 @@
     "url": "https://github.com/biskerspe-crypto/PDFRuche.git"
   },
   "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "tauri": "tauri",
