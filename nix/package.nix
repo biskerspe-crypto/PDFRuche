@@ -227,7 +227,7 @@ sed "s|listen 3000|listen $PDFCRAFT_PORT|g" "$PDFCRAFT_CONF" > "$RUNTIME_CONF"
 
 trap "rm -f $RUNTIME_CONF" EXIT
 
-echo "LunaPDF running at http://localhost:$PDFCRAFT_PORT"
+echo "PDFRuche running at http://localhost:$PDFCRAFT_PORT"
 exec @nginx@/bin/nginx -c "$RUNTIME_CONF"
 WRAPPER
 
@@ -240,8 +240,8 @@ WRAPPER
   '';
 
   meta = with lib; {
-    description = "LunaPDF - Professional PDF Tools, Free, Private & Browser-Based";
-    homepage = "https://github.com/biskerspe-crypto/LunaPDF";
+    description = "PDFRuche - Professional PDF Tools, Free, Private & Browser-Based";
+    homepage = "https://github.com/biskerspe-crypto/PDFRuche";
     license = licenses.agpl3Only;
     platforms = [ "x86_64-linux" "aarch64-linux" ];
     mainProgram = "pdfcraft";

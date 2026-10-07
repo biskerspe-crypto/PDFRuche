@@ -33,7 +33,7 @@ Note : `postinstall` exécute les scripts de synchronisation (WASM, workers PDF.
 
 | Variable | Requis | Exemple | Description |
 |---|---|---|---|
-| `NEXT_PUBLIC_SITE_URL` | Non | `https://lunapdf.app` | URL canonique du site (défaut : `https://lunapdf.app`) |
+| `NEXT_PUBLIC_SITE_URL` | Non | `https://PDFRuche.app` | URL canonique du site (défaut : `https://PDFRuche.app`) |
 | `NEXT_PUBLIC_ADSENSE_CLIENT_ID` | Non | `ca-pub-123456789` | ID client AdSense (`data-ad-client`) |
 | `NEXT_PUBLIC_ADSENSE_SLOT_*` | Non | `1234567890` | IDs des emplacements ad (`data-ad-slot`) |
 | `TAURI_ENV` | Non | `true` | Active la préparation build Tauri |

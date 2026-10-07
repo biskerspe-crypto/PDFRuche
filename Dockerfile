@@ -37,7 +37,7 @@ RUN --mount=type=cache,target=/root/.npm \
 FROM nginx:1.25-alpine AS production
 
 # Add labels for GitHub Container Registry (AGPL-3.0 compliance)
-LABEL org.opencontainers.image.source="https://github.com/biskerspe-crypto/LunaPDF"
+LABEL org.opencontainers.image.source="https://github.com/biskerspe-crypto/PDFRuche"
 LABEL org.opencontainers.image.description="PDFRuche - Professional PDF Tools, Free, Private & Browser-Based (AGPL-3.0-or-later)"
 LABEL org.opencontainers.image.licenses="AGPL-3.0-or-later"
 LABEL org.opencontainers.image.title="PDFRuche"

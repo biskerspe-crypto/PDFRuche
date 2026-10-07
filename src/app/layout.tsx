@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   title: 'PDFRuche - The Living Workspace for Everything PDF',
   description: 'PDFRuche — The Organic Powerhouse for Everything PDF. Free, secure and 100% browser-based PDF tools for merging, splitting, compressing, converting, signing, and editing PDF files with zero server uploads.',
   icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.svg',
-    apple: '/favicon.svg',
+    icon: '/icon.jpg',
+    shortcut: '/icon.jpg',
+    apple: '/icon.jpg',
   },
 };
 

@@ -48,7 +48,7 @@ This extension:
 
 ## Links
 
-- Website: [lunapdf.app](https://lunapdf.app)
+- Website: [PDFRuche.app](https://PDFRuche.app)
 - GitHub: [github.com/PDFCraftTool/pdfcraft](https://github.com/PDFCraftTool/pdfcraft)
 
 ## License

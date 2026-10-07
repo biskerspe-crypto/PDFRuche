@@ -101,9 +101,9 @@ export function generateBaseMetadata(options: PageMetadataOptions): Metadata {
         'max-video-preview': -1,
       },
     icons: {
-      icon: '/favicon.svg',
-      shortcut: '/favicon.svg',
-      apple: '/favicon.svg',
+      icon: '/icon.jpg',
+      shortcut: '/icon.jpg',
+      apple: '/icon.jpg',
     },
     alternates: {
       canonical: canonicalUrl,

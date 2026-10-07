@@ -1,7 +1,7 @@
 {
   "productName": "PDFRuche",
   "version": "0.1.0",
-  "identifier": "com.lunapdf.app",
+  "identifier": "com.PDFRuche.app",
   "build": {
     "beforeDevCommand": "npm run dev",
     "beforeBuildCommand": "npm run build",

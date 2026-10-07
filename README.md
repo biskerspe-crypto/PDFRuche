@@ -87,7 +87,7 @@ Navigate to `/workflow` or click on "Workflow Editor" in the navigation menu.
 
 1.  **Clone the repository**
      ```bash
-      git clone https://github.com/biskerspe-crypto/LunaPDF.git
+      git clone https://github.com/biskerspe-crypto/PDFRuche.git
       cd PDFRuche
      ```
 
@@ -143,7 +143,7 @@ PDFRuche stands on the shoulders of giants:
 ## 📄 License
 
 This project is licensed under the **AGPL-3.0-or-later** License - see the [LICENSE](LICENSE) file for details. PDFRuche is a modified version of **PDFCraft** (AGPL-3.0) — attribution and source availability obligations are preserved, see [PDFRUCHE_MODIFICATIONS.md](PDFRUCHE_MODIFICATIONS.md).
-Corresponding Source for any network deployment is available at https://github.com/biskerspe-crypto/LunaPDF and via `/LICENSE` and `/source` on the deployed site (AGPL §13).
+Corresponding Source for any network deployment is available at https://github.com/biskerspe-crypto/PDFRuche and via `/LICENSE` and `/source` on the deployed site (AGPL §13).
 
 ---
 

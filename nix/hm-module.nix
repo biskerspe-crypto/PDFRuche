@@ -5,13 +5,13 @@ let
 in
 {
   options.services.pdfcraft = {
-    enable = lib.mkEnableOption "LunaPDF - Professional PDF Tools";
+    enable = lib.mkEnableOption "PDFRuche - Professional PDF Tools";
 
     package = lib.mkOption {
       type = lib.types.package;
       default = pkgs.pdfcraft;
       defaultText = lib.literalExpression "pkgs.pdfcraft";
-      description = "The LunaPDF package to use.";
+      description = "The PDFRuche package to use.";
     };
 
     port = lib.mkOption {
@@ -30,7 +30,7 @@ in
 
     systemd.user.services.pdfcraft = {
       Unit = {
-        Description = "LunaPDF PDF Tools";
+        Description = "PDFRuche PDF Tools";
         After = [ "network.target" ];
       };
 
